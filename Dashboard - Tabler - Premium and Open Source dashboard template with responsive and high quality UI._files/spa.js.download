@@ -1,0 +1,41 @@
+function spalinker(page) {
+  const pages = ["pg-home", "pg-form","pg-doc","pg-ext-act","pg-ext-gall","pg-ext-inv","pg-ext-sea","pg-ext-pri","pg-ext-user","pg-ext-lic","pg-ext-mus","pg-ext-wid","pg-ext-wiz"];
+  //alert(page);
+
+
+  for (let i = 0; i < pages.length; i++) {
+
+    var element = document.getElementById(pages[i]);
+    let classes = element.className;
+    const classlists = classes.split(" ");
+
+
+    var nav = document.getElementById(pages[i]+"-nav");
+    let navclasses = element.className;
+    const navclasslist = navclasses.split(" ");
+
+    if (pages[i]==page) {
+      element.classList.remove("hidden");
+      if (!navclasslist.includes("active")) {
+        nav.classList.add("active");
+      }
+      continue;
+
+      if (true) {}
+    };
+
+    nav.classList.remove("active");
+    if (classlists.includes("hidden")){
+       continue;
+    }else{
+      element.classList.add("hidden");
+    };
+    
+    // element.classList.remove("hidden");
+  };
+//   var element = document.getElementById("main");
+//   element.classList.remove("hidden");
+//   var element = document.getElementById("loader");
+//   element.classList.add("hidden");
+
+ }
